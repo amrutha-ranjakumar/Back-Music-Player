@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken')
 
 exports.register = async (req, res) => {
     console.log("userController:register function");
-    const { username, email, password } = req.body;
+    const { username, email, password, } = req.body;
     console.log(username);
     console.log(email);
     console.log(password);
@@ -24,9 +24,8 @@ exports.register = async (req, res) => {
                 username: username,
                 email: email,
                 password: password,
-                github: "",
-                linkedin: "",
-                profile: ""
+        
+               
             })
             await newuser.save()
             res.status(200).json("registration request received successfully")
@@ -64,3 +63,4 @@ exports.login = async (req, res) => {
         res.status(401).json("login request failed due to", err)
     }
 }
+

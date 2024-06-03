@@ -3,8 +3,6 @@
 const router = require('./Routes/router')
 
 
-
-
 //1)import dotenv
 require('dotenv').config()
 
