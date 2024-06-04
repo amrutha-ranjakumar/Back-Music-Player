@@ -1,9 +1,4 @@
 const multer = require('multer')
-
-
-
-
-
 const storage = multer.diskStorage({
     destination: (req, File, callback) => {
         callback(null, './uploads')
@@ -12,11 +7,6 @@ const storage = multer.diskStorage({
         const filename = `file-${Date.now()}-${file.originalname}`
         callback(null, filename)
     }
-
-
-    
-
-
 })
 const fileFilter = (req, file, callback) => {
     if ((file.mimetype.startsWith('image/') && ['image/png', 'image/jpeg', 'image/jpg'].includes(file.mimetype)) ||

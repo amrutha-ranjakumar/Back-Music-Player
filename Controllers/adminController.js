@@ -72,12 +72,4 @@ exports.getAllMusic = async (req, res) => {
     }
 }
 
-// exports.getcenterMusic = async (req, res) => {
-//     try {
-//         const centerMusic = await admins.find().limit(4);
-//         res.status(200).json(centerMusic);
 
-//     } catch (err) {
-//         res.status(401).json("Request failed due to", err);
-//     }
-// }

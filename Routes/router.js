@@ -4,7 +4,7 @@ const adminController =require('../Controllers/adminController')
 const jwtMiddleware =require('../MiddleWares/jwtMiddleware')
 const multerConfig =require('../MiddleWares/multerMiddleware')
 const profileController =require('../Controllers/profileController')
-// const  songDetailsController = require('../Controllers/songDeailsController')
+
 
 
 //1)import express
@@ -33,15 +33,7 @@ router.post("/admin/add",jwtMiddleware,multerConfig.any(),adminController.addAdm
 //6)get all music
 router.get('/music/all-music',jwtMiddleware,adminController.getAllMusic)
 
-//7)get music for center page
-// router.get('/music/center-music',adminController.getcenterMusic)
 
-//8) post songDetails 
-// router.post('/songdetails/add',jwtMiddleware,multerConfig.any(),songDetailsController.addsongDetails)
-
-
-//6)get all details
-// router.get('/songdetails/get',jwtMiddleware,songDetailsController.getAllDetails)
 
 
 
